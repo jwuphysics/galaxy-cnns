@@ -14,7 +14,7 @@ class Printer():
 
 
 # load the data
-df = pd.read_csv('./SDSSspecgalsDR14_boada.csv')
+df = pd.read_csv('./catalogs/SDSSspecgalsDR14_boada.csv')
 
 width = 128
 height = 128
@@ -33,9 +33,9 @@ for index, row in df.iterrows():
            "&scale={}"
            "&width={}"
            "&height={}".format(row.ra, row.dec, scale, width, height))
-    if not os.path.isfile('{}.png'.format(row.objID.astype(int64))):
+    if not os.path.isfile('images/{}.png'.format(row.objID.astype(int64))):
         img = skimage.io.imread(url)
-        skimage.io.imsave('{}.png'.format(row.objID.astype(int64)), img)
+        skimage.io.imsave('images/{}.png'.format(row.objID.astype(int64)), img)
 
     current = index / n_gals
     status = "{:.3f}% of {} completed.".format(current, n_gals)
