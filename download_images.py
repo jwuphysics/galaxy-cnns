@@ -4,6 +4,7 @@ import time
 import sys
 from numpy import int64
 import os
+import urllib
 
 # stuff to make the status pretty.
 class Printer():
@@ -34,11 +35,13 @@ for index, row in df.iterrows():
            "&width={}"
            "&height={}".format(row.ra, row.dec, scale, width, height))
     if not os.path.isfile('images/{}.png'.format(row.objID.astype(int64))):
-        img = skimage.io.imread(url)
-        skimage.io.imsave('images/{}.png'.format(row.objID.astype(int64)), img)
-
-    current = index / n_gals
+        try:
+            img = skimage.io.imread(url)
+            skimage.io.imsave('images/{}.png'.format(row.objID.astype(int64)), img)
+            time.sleep(0.5)
+        except urllib.error.HTTPError:
+            pass
+    current = index / n_gals * 100
     status = "{:.3f}% of {} completed.".format(current, n_gals)
     Printer(status)
 
-    time.sleep(0.5)
