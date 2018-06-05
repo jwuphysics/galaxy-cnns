@@ -14,7 +14,7 @@ class Printer():
 
 
 # load the data
-df = pd.read_csv('./catalogs/SDSSspecgalsDR14_boada.csv')
+df = pd.read_csv('./catalogs/SDSSspecgalsDR14_jwuphysics.csv')
 
 width = 128
 height = 128
@@ -23,22 +23,25 @@ pixelsize = 0.396
 # total number of images
 n_gals = df.shape[0]
 
-for index, row in df.iterrows():
-    # the 'scale' parameter is set so that the image will be about 2x the size
-    # of the galaxy
-    scale = 2 * row['petroR90_r'] / pixelsize / width
+for row in df.itertuples():
+    # the 'scale' parameter is set to be 15 arcsec -> pixels
+    scale = 15 / pixelsize / width
+    
     url = ("http://skyserver.sdss.org/dr14/SkyserverWS/ImgCutout/getjpeg"
            "?ra={}"
            "&dec={}"
            "&scale={}"
            "&width={}"
            "&height={}".format(row.ra, row.dec, scale, width, height))
-    if not os.path.isfile('images/{}.png'.format(row.objID.astype(int64))):
-        img = skimage.io.imread(url)
-        skimage.io.imsave('images/{}.png'.format(row.objID.astype(int64)), img)
-
-    current = index / n_gals
+    if not os.path.isfile('images/{}.jpg'.format(row.objID)):
+        try:
+            img = skimage.io.imread(url)
+            skimage.io.imsave('images/{}.jpg'.format(row.objID), img)
+            time.sleep(0.5)
+        except urllib.error.HTTPError:
+            pass
+    current = row.Index / n_gals * 100
     status = "{:.3f}% of {} completed.".format(current, n_gals)
     Printer(status)
 
-    time.sleep(0.5)
+    time.sleep(0.2)
