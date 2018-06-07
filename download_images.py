@@ -14,7 +14,7 @@ class Printer():
 
 
 # load the data
-df = pd.read_csv('./catalogs/SDSSspecgalsDR14_boada.csv')
+df = pd.read_csv('./catalogs/SDSSspecgalsDR14_jwuphysics.csv')
 
 width = 128
 height = 128
