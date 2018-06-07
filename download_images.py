@@ -33,10 +33,10 @@ for row in df.itertuples():
            "&scale={}"
            "&width={}"
            "&height={}".format(row.ra, row.dec, scale, width, height))
-    if not os.path.isfile('images/{}.png'.format(row.objID)):
+    if not os.path.isfile('images/{}.jpg'.format(row.objID)):
         try:
             img = skimage.io.imread(url)
-            skimage.io.imsave('images/{}.png'.format(row.objID), img)
+            skimage.io.imsave('images/{}.jpg'.format(row.objID), img)
             time.sleep(0.5)
         except urllib.error.HTTPError:
             pass
