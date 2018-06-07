@@ -104,8 +104,15 @@ venv.bak/
 .mypy_cache/
 
 # added stuff
-catalogs/*.csv
-images/*.png
+catalogs
+images
+images_png
+test
+test-small
+tmp
+train
+train-small
+models
 
 # symlink for fastai library
 fastai
