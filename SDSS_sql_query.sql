@@ -36,7 +36,11 @@ SELECT top 100
   GSX.d4000, 
   GSX.d4000_err, 
   GSE.bptclass,
+  GSE.oh_p2p5,
+  GSE.oh_p16,
   GSE.oh_p50,
+  GSE.oh_p84,
+  GSE.oh_p97p5,
   GSE.lgm_tot_p50, 
   GSE.sfr_tot_p50
 INTO mydb.SDSSspecgalsDR14 
