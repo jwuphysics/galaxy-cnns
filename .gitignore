@@ -105,8 +105,10 @@ venv.bak/
 
 # added stuff
 catalogs/*.csv
-images/*.png
-images/*.jpg
+images/
+images_15x15/
+
 
 # symlink for fastai library
 fastai
+
