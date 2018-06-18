@@ -114,6 +114,8 @@ tmp
 train
 train-small
 models
+test-mass-metal
+train-mass-metal
 
 # symlink for fastai library
 fastai

@@ -14,8 +14,13 @@ label_csv = f'{PATH}/catalogs/SDSSspecgalsDR14_boada.csv'
 df = pd.read_csv(label_csv, index_col='objID')
 
 # decide which columns to use
-cols = ['oh_p2p5', 'oh_p16', 'oh_p50', 'oh_p84', 'oh_p97p5']
+#cols = ['oh_p2p5', 'oh_p16', 'oh_p50', 'oh_p84', 'oh_p97p5']
+cols = ['oh_p16', 'oh_p50', 'oh_p84', 'lgm_tot_p50']
 df = df[cols].copy()
+
+# prune nan mass values
+if 'lgm_tot_p50' in cols:
+    df = df[df.lgm_tot_p50 > 0].copy()
 
 # do random split
 split_idxs = np.arange(len(df))
@@ -29,20 +34,20 @@ test_idxs  = split_idxs[-25000:]
 valid_train_idxs = []
 for objid, idx in tqdm(zip(df.iloc[train_idxs].index, train_idxs), total=len(train_idxs)):
     try:
-        shutil.copyfile(f'{PATH}/images/{objid}.jpg', f'{PATH}/train/{objid}.jpg')
+        shutil.copyfile(f'{PATH}/images/{objid}.jpg', f'{PATH}/train-mass-metal/{objid}.jpg')
         valid_train_idxs.append(idx)
     except FileNotFoundError:
         continue
 
 # save mini-dataframe
 df_train = df.iloc[valid_train_idxs].copy()
-df_train.to_csv(f'{PATH}/catalogs/train-metaldist.csv')
+df_train.to_csv(f'{PATH}/catalogs/train-mass-metal.csv')
 
 # do the same thing, except for test-small dataset
 valid_test_idxs = []
 for objid, idx in tqdm(zip(df.iloc[test_idxs].index, test_idxs), total=len(test_idxs)):
     try:
-        shutil.copyfile(f'{PATH}/images/{objid}.jpg', f'{PATH}/test/{objid}.jpg')
+        shutil.copyfile(f'{PATH}/images/{objid}.jpg', f'{PATH}/test-mass-metal/{objid}.jpg')
         valid_test_idxs.append(idx)
     except FileNotFoundError:
         continue
@@ -50,6 +55,6 @@ for objid, idx in tqdm(zip(df.iloc[test_idxs].index, test_idxs), total=len(test_
 # save mini-dataframe *and sort by index*
 df_test = df.iloc[valid_test_idxs].copy()
 df_test.sort_index(inplace=True)
-df_test.to_csv(f'{PATH}/catalogs/test-metaldist.csv')
+df_test.to_csv(f'{PATH}/catalogs/test-mass-metal.csv')
 
 
