@@ -110,6 +110,8 @@ images_15x15/
 
 test
 test-small
+train-r
+test-r
 tmp
 train
 train-small
