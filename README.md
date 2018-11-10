@@ -51,7 +51,7 @@ on the fastai forums.
 
 
 ### Data sets
-We queried the [SDSS DR12 image cutout service](http://skyserver.sdss.org/dr12/en/help/docs/api.aspx#imgcutout) 
+We queried the [SDSS DR14 image cutout service](http://skyserver.sdss.org/dr14/en/help/docs/api.aspx#imgcutout) 
 using the script `./download_images.py` in order to obtain *gri* images.
 
 We queried the [SDSS MPA-JHU DR7 catalog](https://wwwmpa.mpa-garching.mpg.de/SDSS/DR7/)
