@@ -118,6 +118,9 @@ train-small
 models
 test-mass-metal
 train-mass-metal
+ps1
+ps1-test
+ps1-train
 
 # symlink for fastai library
 fastai
