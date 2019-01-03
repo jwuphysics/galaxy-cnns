@@ -1,0 +1,46 @@
+Total train + val + test size = 116428
+  Test fold 1/5 (size = 23285)
+    0.08519 (Validation) fold 1/4, size = 18628
+    0.08381 (Test)
+    0.08292 (Validation) fold 2/4, size = 18629
+    0.08271 (Test)
+    0.08592 (Validation) fold 3/4, size = 18628
+    0.08369 (Test)
+    0.08395 (Validation) fold 4/4, size = 18629
+    0.08276 (Test)
+  Test fold 2/5 (size = 23286)
+    0.08576 (Validation) fold 1/4, size = 18628
+    0.08425 (Test)
+    0.08464 (Validation) fold 2/4, size = 18628
+    0.08382 (Test)
+    0.08832 (Validation) fold 3/4, size = 18629
+    0.08851 (Test)
+    0.08511 (Validation) fold 4/4, size = 18628
+    0.08373 (Test)
+  Test fold 3/5 (size = 23285)
+    0.08371 (Validation) fold 1/4, size = 18628
+    0.08150 (Test)
+    0.08447 (Validation) fold 2/4, size = 18629
+    0.08326 (Test)
+    0.08698 (Validation) fold 3/4, size = 18628
+    0.08490 (Test)
+    0.08376 (Validation) fold 4/4, size = 18629
+    0.08235 (Test)
+  Test fold 4/5 (size = 23286)
+    0.08405 (Validation) fold 1/4, size = 18628
+    0.08213 (Test)
+    0.08311 (Validation) fold 2/4, size = 18628
+    0.08171 (Test)
+    0.08432 (Validation) fold 3/4, size = 18629
+    0.08201 (Test)
+    0.08583 (Validation) fold 4/4, size = 18628
+    0.08341 (Test)
+  Test fold 5/5 (size = 23286)
+    0.08360 (Validation) fold 1/4, size = 18628
+    0.08216 (Test)
+    0.08342 (Validation) fold 2/4, size = 18628
+    0.08187 (Test)
+    0.08346 (Validation) fold 3/4, size = 18629
+    0.08234 (Test)
+    0.08451 (Validation) fold 4/4, size = 18628
+    0.08175 (Test)
