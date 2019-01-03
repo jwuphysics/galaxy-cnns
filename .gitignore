@@ -121,6 +121,9 @@ train-mass-metal
 ps1
 ps1-test
 ps1-train
+nested_csv*
+
+*.bak
 
 # symlink for fastai library
 fastai
