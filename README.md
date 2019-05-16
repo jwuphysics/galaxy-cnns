@@ -31,7 +31,8 @@ cd galaxy-cnns
 All analysis was performed inside the Jupyter notebooks using a Python3 environment.
 We use version 0.7.0 of the [fastai](https://github.com/fastai/fastai) machine 
 learning framework built atop [Pytorch](https://pytorch.org/). This can be installed 
-by running the following:
+by following the instructions on the Fastai README page. We will soon have working
+examples for Fastai version 1.0, which can be installed by running:
 ```
 git clone https://github.com/fastai/fastai.git
 cd fastai 
@@ -90,5 +91,6 @@ please use the following citation, produced by
           doi = {10.1093/mnras/stz333},
 archivePrefix = {arXiv},
        eprint = {1810.12913},
- primaryClass = {astro-ph.GA},
+ primaryClass = {astro-ph.GA}
+ }
 ```
