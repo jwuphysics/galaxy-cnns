@@ -29,7 +29,7 @@ cd galaxy-cnns
 
 ### Dependencies
 All analysis was performed inside the Jupyter notebooks using a Python3 environment.
-We use the verion 0.7.0 of the [fastai](https://github.com/fastai/fastai) machine 
+We use version 0.7.0 of the [fastai](https://github.com/fastai/fastai) machine 
 learning framework built atop [Pytorch](https://pytorch.org/). This can be installed 
 by running the following:
 ```
@@ -76,16 +76,19 @@ may be cleaned up in a future update).
 ## Citation
 If you would like to reference our [paper]((https://arxiv.org/abs/1810.12913)), 
 please use the following citation, produced by 
-[NASA ADS](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1810.12913):
+[NASA ADS](https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4683W):
 ```
-@ARTICLE{2018arXiv181012913W,
-   author = {Wu, J.~F. and Boada, S.},
-    title = "{Using convolutional neural networks to predict galaxy metallicity from three-color images}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
-   eprint = {1810.12913},
- keywords = {Astrophysics - Astrophysics of Galaxies},
-     year = {2018},
-    month = {oct}
-}
+@ARTICLE{2019MNRAS.484.4683W,
+       author = {{Wu}, John F. and {Boada}, Steven},
+        title = "{Using convolutional neural networks to predict galaxy metallicity from three-colour images}",
+      journal = {Monthly Notices of the Royal Astronomical Society},
+         year = "2019",
+        month = "Apr",
+       volume = {484},
+       number = {4},
+        pages = {4683-4694},
+          doi = {10.1093/mnras/stz333},
+archivePrefix = {arXiv},
+       eprint = {1810.12913},
+ primaryClass = {astro-ph.GA},
 ```
