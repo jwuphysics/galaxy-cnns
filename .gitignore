@@ -107,6 +107,8 @@ venv.bak/
 catalogs/*.csv
 images/
 images_15x15/
+*.tar.gz
+
 
 test
 test-small

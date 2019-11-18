@@ -8,7 +8,9 @@ galaxy properties using Sloan Digital Sky Survey (SDSS) *gri* images.
 Gas-phase metallicity, which is often estimated by using optical
 spectroscopy, can also be estimated using our CNN.
 
-We describe our methods in a paper: [Wu & Boada (2018)](https://arxiv.org/abs/1810.12913).
+We describe our methods in a paper: Wu & Boada (2019, MNRAS, in press; [arXiv:1810.12913](https://arxiv.org/abs/1810.12913)).
+
+See also a [simplified demo of our work](https://github.com/jwuphysics/convnet-demo).
 
 ## Table of contents
 - [Usage](#usage)
@@ -27,9 +29,10 @@ cd galaxy-cnns
 
 ### Dependencies
 All analysis was performed inside the Jupyter notebooks using a Python3 environment.
-We use the verion 0.7.0 of the [fastai](https://github.com/fastai/fastai) machine 
+We use version 0.7.0 of the [fastai](https://github.com/fastai/fastai) machine 
 learning framework built atop [Pytorch](https://pytorch.org/). This can be installed 
-by running the following:
+by following the instructions on the Fastai README page. We will soon have working
+examples for Fastai version 1.0, which can be installed by running:
 ```
 git clone https://github.com/fastai/fastai.git
 cd fastai 
@@ -51,7 +54,7 @@ on the fastai forums.
 
 
 ### Data sets
-We queried the [SDSS DR12 image cutout service](http://skyserver.sdss.org/dr12/en/help/docs/api.aspx#imgcutout) 
+We queried the [SDSS DR14 image cutout service](http://skyserver.sdss.org/dr14/en/help/docs/api.aspx#imgcutout) 
 using the script `./download_images.py` in order to obtain *gri* images.
 
 We queried the [SDSS MPA-JHU DR7 catalog](https://wwwmpa.mpa-garching.mpg.de/SDSS/DR7/)
@@ -74,16 +77,20 @@ may be cleaned up in a future update).
 ## Citation
 If you would like to reference our [paper]((https://arxiv.org/abs/1810.12913)), 
 please use the following citation, produced by 
-[NASA ADS](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1810.12913):
+[NASA ADS](https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4683W):
 ```
-@ARTICLE{2018arXiv181012913W,
-   author = {Wu, J.~F. and Boada, S.},
-    title = "{Using convolutional neural networks to predict galaxy metallicity from three-color images}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
-   eprint = {1810.12913},
- keywords = {Astrophysics - Astrophysics of Galaxies},
-     year = {2018},
-    month = {oct}
-}
+@ARTICLE{2019MNRAS.484.4683W,
+       author = {{Wu}, John F. and {Boada}, Steven},
+        title = "{Using convolutional neural networks to predict galaxy metallicity from three-colour images}",
+      journal = {Monthly Notices of the Royal Astronomical Society},
+         year = "2019",
+        month = "Apr",
+       volume = {484},
+       number = {4},
+        pages = {4683-4694},
+          doi = {10.1093/mnras/stz333},
+archivePrefix = {arXiv},
+       eprint = {1810.12913},
+ primaryClass = {astro-ph.GA}
+ }
 ```
