@@ -8,7 +8,7 @@ galaxy properties using Sloan Digital Sky Survey (SDSS) *gri* images.
 Gas-phase metallicity, which is often estimated by using optical
 spectroscopy, can also be estimated using our CNN.
 
-We describe our methods in a paper: Wu & Boada (2019, MNRAS, in press; [arXiv:1810.12913](https://arxiv.org/abs/1810.12913)).
+We describe our methods in a paper: Wu & Boada ([2019, MNRAS, 484, 4683](https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4683W/abstract); [arXiv:1810.12913](https://arxiv.org/abs/1810.12913)).
 
 See also a [simplified demo of our work](https://github.com/jwuphysics/convnet-demo).
 
